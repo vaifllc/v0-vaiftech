@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Refund Notification</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .header {
+      background-color: #800020; /* Burgundy */
+      padding: 20px;
+      text-align: center;
+    }
+    .header h1 {
+      color: white;
+      margin: 0;
+    }
+    .content {
+      padding: 20px;
+      background-color: #f9f9f9;
+    }
+    .details {
+      background-color: white;
+      padding: 15px;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      border: 1px solid #ddd;
+    }
+    .details table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .details th, .details td {
+      padding: 10px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+    .details th {
+      width: 40%;
+    }
+    .footer {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 12px;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Payment Refund Notification</h1>
+    </div>
+    <div class="content">
+      <p>Dear {{name}},</p>
+      <p>We are writing to confirm that we have processed a refund for your recent payment.</p>
+
+      <div class="details">
+        <h3>Refund Details</h3>
+        <table>
+          <tr>
+            <th>Amount Refunded:</th>
+            <td>{{currency}}{{amount}}</td>
+          </tr>
+          <tr>
+            <th>Date:</th>
+            <td>{{date}}</td>
+          </tr>
+          <tr>
+            <th>Reason:</th>
+            <td>{{reason}}</td>
+          </tr>
+        </table>
+      </div>
+
+      <p>The refunded amount should appear in your account within 5-10 business days, depending on your payment method and financial institution.</p>
+
+      <p>If you have any questions or concerns regarding this refund, please don't hesitate to contact our support team.</p>
+
+      <p>Thank you for your understanding.</p>
+
+      <p>Best regards,<br>The {{companyName}} Team</p>
+    </div>
+    <div class="footer">
+      <p>&copy; {{year}} {{companyName}}. All rights reserved.</p>
+      <p>This is an automated email, please do not reply.</p>
+    </div>
+  </div>
+</body>
+</html>

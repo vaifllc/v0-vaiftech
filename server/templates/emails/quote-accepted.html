@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quote Accepted</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .header {
+      background-color: #800020; /* Burgundy */
+      padding: 20px;
+      text-align: center;
+    }
+    .header h1 {
+      color: white;
+      margin: 0;
+    }
+    .content {
+      padding: 20px;
+      background-color: #f9f9f9;
+    }
+    .quote-box {
+      background-color: white;
+      padding: 15px;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      border: 1px solid #ddd;
+    }
+    .quote-box table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .quote-box th, .quote-box td {
+      padding: 10px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+    .quote-box th {
+      width: 40%;
+    }
+    .button {
+      display: inline-block;
+      background-color: #800020; /* Burgundy */
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+    .footer {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 12px;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Quote Accepted</h1>
+    </div>
+    <div class="content">
+      <p>Dear {{userName}},</p>
+      <p>Great news! Your quote {{quoteNumber}} has been accepted by {{clientName}}.</p>
+
+      <div class="quote-box">
+        <h3>Quote Details</h3>
+        <table>
+          <tr>
+            <th>Quote Number:</th>
+            <td>{{quoteNumber}}</td>
+          </tr>
+          <tr>
+            <th>Client:</th>
+            <td>{{clientName}}</td>
+          </tr>
+          <tr>
+            <th>Amount:</th>
+            <td>{{quoteCurrency}}{{quoteAmount}}</td>
+          </tr>
+        </table>
+      </div>
+
+      <p>You can view the quote details and convert it to an invoice by clicking the button below:</p>
+      <a href="{{quoteLink}}" class="button">View Quote</a>
+
+      <p>Next steps:</p>
+      <ol>
+        <li>Convert the quote to an invoice</li>
+        <li>Schedule a kickoff meeting with the client</li>
+        <li>Begin work on the project</li>
+      </ol>
+
+      <p>Thank you for using our platform.</p>
+
+      <p>Best regards,<br>The {{companyName}} Team</p>
+    </div>
+    <div class="footer">
+      <p>&copy; {{year}} {{companyName}}. All rights reserved.</p>
+      <p>This is an automated email, please do not reply.</p>
+    </div>
+  </div>
+</body>
+</html>
